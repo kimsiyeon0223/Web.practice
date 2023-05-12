@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 일반현제 선택자 ~ 표시 이후 선택*/
+        .orange ~ li{
+            color: red;
+        }
+        /* css - 가상클래스선택자 : 콜론 한개*/
+        a:hover{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .box:hover{
+            width: 100px;
+            background: green;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background: yellow;
+            transition: 0.4s;
+        }
+        .box:active{
+            width: 100px;
+            background:rgb(98, 0, 128);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>딸기</li>
+        <li class="orange">수박</li>
+        <li>오랜지</li>
+        <li>망고</li>
+        <li>사과</li>
+    </ul>
+
+    <a href="https://google.com">Google!</a>
+    <div class="box">1</div>
+    <div class="box">2</div>
+</body>
+</html>

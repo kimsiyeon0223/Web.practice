@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상변경해보기</title>
+    <style>
+        body{text-align: center;}
+        #first {color: #00f;}
+    </style>
+</head>
+<body>
+    <h1 id="first">부산소프트웨어마이스터고</h1>
+    <h1 id="addr">부산 강서구 가락동 1393</h1>
+    <p>위 텍스트를 클릭해 보세요</p>
+
+    <script>
+        var get1 = document.querySelector("#first")
+        get1.onclick = function(){
+            get1.style.color = "red"
+        }
+
+        var get2 = document.querySelector("#addr")
+        get2.onmouseover = function(){
+            get2.style.color = "yellow"
+        }
+    </script>
+</body>
+</html>

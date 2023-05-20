@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 예제</title>
+</head>
+<body>
+    <button id="myButton">클릭하세요!</button>
+    <button id="myButton2">클릭하세요!</button>
+    <button id="myButton3">클릭하세요!</button>
+    <div class="cl"></div>
+    <script>
+        // 버튼 요소 가져오기
+        const button = document.getElementById("myButton")
+
+        // 클릭 이벤트 리스너 등록
+        button.addEventListener("click", function(){
+            //버튼의 텍스트 변경
+            button.textContent = "클릭되었습니다!"
+        })
+
+        const button2 = document.getElementById("myButton2")
+
+        button2.addEventListener("click", function(){
+            button2.style.color = "red"
+        })
+
+        const button3 = document.getElementById("myButton3")
+        const div = document.getElementsByClassName("cl")
+
+        button3.addEventListener("click", function(){
+            document.write("클릭되었습니다.")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 폼 입출력</title>
+    <style>
+        #msg{
+            border: 2px solid royalblue;
+            margin-top: 20px;
+            padding: 20px;
+            width: 300px;
+            height: 100px;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+        }
+        #msg2{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript 연습</h1>
+    <form name="form1">
+        <input type="text" name="txt1" id="txt1" placeholder="값입력">
+        <input type="button" value="확인" onclick="show()">
+        <input type="reset" value="취소">
+    </form>
+    <div id="msg"></div>
+    <hr>
+    <p id="msg2"></p>
+    <script>
+        function show(){
+            document.getElementById("msg").innerHTML = `${txt1.value}님 안녕하세요!`
+            document.getElementById("msg2").innerHTML = `${txt1.value}님 오늘도 멋지네용!`
+        }
+    </script>
+</body>
+</html>

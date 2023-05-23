@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML vs innerText vs textContent 예제</title>
+</head>
+<body>
+    <div id="str">
+        오늘은 비오는 월요일 밤<span style="display:none">저녁은 피자</span>
+    </div>
+
+    <script>
+        function getInnerHTML(){
+            const element = document.getElementById('str')
+            alert(element.innerHTML)
+        }
+
+        function getInnerText(){
+            const element = document.getElementById('str')
+            alert(element.innerText)
+        }
+
+        function getTextContent(){
+            const element = document.getElementById('str')
+            alert(element.textContent)
+        }
+    </script>
+
+    <input type='button' value="innerHTML" onclick="getInnerHTML()"/>
+    <input type='button' value="innerText" onclick="getInnerText()"/>
+    <input type='button' value="textContent" onclick="getTextContent()"/>
+</body>
+</html>
+<!-- innerHTML과 innerText과 textContent 차이는
+innerHTML은 요소 내에 있는 HTML과 XML 모두를 의미하고,
+textContent는 script나 style 태그와 상관없이 해당 노드가 가지고 있는 text를 의미한다. -->
